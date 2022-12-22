@@ -1,0 +1,72 @@
+
+@use 'partials/mixin' as *;
+@use 'partials/variables' as *;
+
+@import '~bootstrap/scss/bootstrap';
+
+// Header
+
+
+header {
+    height: 180px;
+    padding: 0 2.5rem;
+    a {
+        color: inherit;
+    }
+
+    .container {
+        @include flex('vertical');
+        justify-content: space-between;
+        height: 100%
+    }
+
+    .menu {
+        @include flex();
+        height: 100%;
+        li {
+        height: 100%;
+        @include flex();
+        padding: 0 15px;
+        font-size: $bigger-font-size;
+        &:hover a {
+            color: $accent-color;
+        }
+        &.active {
+            color: $accent-color;
+            box-shadow: inset 0px -7px 0 0px $accent-color;
+        }
+        }
+    }
+}
+
+
+
+
+  //footer
+
+  footer{
+    background-color: #303030;
+    height: 250px;
+        .container {
+            display: flex;
+            align-items: center;
+            .follow {
+            margin-left: auto;
+            color: $accent-color;
+            font-size: $bigger-font-size;
+            font-weight: 600;
+            padding: 0 25px;
+            }
+            .sign-up {
+            color: white;
+            font-size: $bigger-font-size;
+            border: 2px solid $accent-color;
+            padding: 1rem;
+            }
+
+            .socials a {
+            padding: 0 15px;
+            }
+        }
+  }
+

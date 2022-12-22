@@ -1,0 +1,19 @@
+@mixin flex($HV: 'both') {
+  display: flex;
+  @if $HV == 'horizontal'{
+    justify-content: center;
+  }@else if $HV == 'vertical'{
+    align-items: center;
+  }@else if $HV == 'both'{
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin spanAccent($color){
+  padding: 12px 25px;
+  color: white;
+  background-color: $color;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
